@@ -1,0 +1,5 @@
+body {background-color: #1F2126; align-items: center; text-align:center; font-family: Microsoft YaHei,Arial,sans-serif}
+div#logo {margin-top: 100px;}
+div#tips {margin-top:25px; color: #FFFFFF;font-size: 15px;line-height: 24px;}
+div#button {margin-top:40px;}
+div#warning {margin-top:100px; color: #4E4E4F;font-size: 13px;}
