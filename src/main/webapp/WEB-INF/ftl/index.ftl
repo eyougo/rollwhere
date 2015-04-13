@@ -4,15 +4,23 @@
     <title><@spring.message "title"/></title>
     <link rel="stylesheet" href="${rc.contextPath}/css/style.css" />
     <script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
-    <script>
-
+    <script>var duoshuoQuery = {short_name:"rollwhere"};</script>
+    <script src="http://static.duoshuo.com/embed.js"></script>
+    <script type="text/javascript">
         $(function (){
+            var el = document.createElement('div');//该div不需要设置class="ds-thread"
+            el.setAttribute('data-thread-key', 'rollwhere');//必选参数
+            el.setAttribute('data-url', 'rollwhere.com');//必选参数
+            DUOSHUO.EmbedThread(el);
+            $("#comments").append(el);
+
             $("#image").click(function(){
                     $.ajax("${rc.contextPath}/roll", {
                         async:false,
                         dataType:"json",
                         success:function(data){
                             $("#open").attr("href", data.url);
+                            $("textarea[name='message']").val("Duang！我在RollWhere上Roll到了一个网站 "+data.url+" :");
                         }
                     });
                 }
@@ -45,4 +53,7 @@
 <div id="warning">
     <@spring.message "warning"/>
 </div>
+<div id="comments">
+</div>
 </body>
+</html>

@@ -43,16 +43,8 @@
 
     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver">
     </bean>
-	
-	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="order" value="2"></property>
-		<property name="prefix" value="/WEB-INF/jsp/" />
-		<property name="suffix" value="" /><!--可为空,方便实现自已的依据扩展名来选择视图解释类的逻辑 -->
-		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-	</bean>
 
 	<bean id="freeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
-		<property name="order" value="1"></property>
 		<property name="cache" value="true" />
 		<property name="contentType" value="text/html;charset=UTF-8"></property>
 		<!-- 宏命令的支持 -->

@@ -2,4 +2,5 @@ body {background-color: #1F2126; align-items: center; text-align:center; font-fa
 div#logo {margin-top: 100px;}
 div#tips {margin-top:25px; color: #FFFFFF;font-size: 15px;line-height: 24px;}
 div#button {margin-top:40px;}
-div#warning {margin-top:100px; color: #4E4E4F;font-size: 13px;}
+div#warning {margin-top:50px; color: #4E4E4F;font-size: 13px;}
+div#comments {margin-left:30%; margin-top: 20px; max-width: 40%;}

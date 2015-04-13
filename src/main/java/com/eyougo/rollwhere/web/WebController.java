@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -41,9 +42,9 @@ public class WebController {
 
     @RequestMapping("/")
     public String index(Model model){
-//        Long urlCount = urlDao.getUrlCount();
-//        model.addAttribute("urlCount", urlCount);
-        return "index.jsp";
+        Long urlCount = urlDao.getUrlCount();
+        model.addAttribute("urlCount", urlCount);
+        return "index.ftl";
     }
 
     @RequestMapping("/roll")
